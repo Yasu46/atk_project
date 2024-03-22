@@ -40,22 +40,22 @@ class Account(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
 
-    groups = models.ManyToManyField(
-        'auth.Group',
-        verbose_name='user groups',
-        blank=True,
-        help_text='All groups this user belongs to.',
-        related_name="custom_account_groups",
-        related_query_name="account",
-    )
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        verbose_name='user permissions',
-        blank=True,
-        help_text='Specific permissions for this user.',
-        related_name="custom_account_permissions",
-        related_query_name="account",
-    )
+    # groups = models.ManyToManyField(
+    #     'auth.Group',
+    #     verbose_name='user groups',
+    #     blank=True,
+    #     help_text='All groups this user belongs to.',
+    #     related_name="custom_account_groups",
+    #     related_query_name="account",
+    # )
+    # user_permissions = models.ManyToManyField(
+    #     'auth.Permission',
+    #     verbose_name='user permissions',
+    #     blank=True,
+    #     help_text='Specific permissions for this user.',
+    #     related_name="custom_account_permissions",
+    #     related_query_name="account",
+    # )
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
