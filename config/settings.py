@@ -24,8 +24,7 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = env('SECRET_KEY')
-SECRET_KEY = 'django-insecure-fqfhhjiy+$-d9b*kn+uc5f%3(2dh75v0ngx=$6^+(z6ah8jzv7'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,18 +83,12 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': env('DB_ENGINE'),
-        # 'NAME': env('DB_NAME'),
-        # 'USER': env('DB_USER'),
-        # 'PASSWORD': env('DB_PASSWORD'),
-        # 'HOST': env('DB_HOST'),
-        # 'PORT': env('DB_PORT'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db',
-        'USER': 'user',
-        'PASSWORD': 'pass',
-        'HOST': 'db',
-        'PORT': 5432,
+        'ENGINE': env('DB_ENGINE'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
     }
 }
 
