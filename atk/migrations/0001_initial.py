@@ -21,6 +21,8 @@ class Migration(migrations.Migration):
                 ('result', models.CharField(choices=[('negative', 'Negative'), ('positive', 'Positive')], max_length=10)),
                 ('image', models.ImageField(upload_to='atk_results/')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
             ],
         ),
     ]
