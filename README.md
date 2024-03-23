@@ -71,5 +71,5 @@ Step 2 : Admin can see the user information and submit ATK result information.
 
 
 # Team Management Result
-Click below link to see the result image.
+Click the link to see the result image.
 https://github.com/Yasu46/atk_project/issues/6#issue-2203768210
