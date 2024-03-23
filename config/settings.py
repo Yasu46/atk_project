@@ -75,6 +75,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.Account'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

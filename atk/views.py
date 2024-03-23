@@ -13,7 +13,7 @@ def submit_atk_result(request):
             atk_result = form.save(commit=False)
             atk_result.user = request.user
             atk_result.save()
-            return redirect('success')  # 成功時にリダイレクトするページ
+            return redirect('success')
     else:
         form = ATKResultForm()
 
