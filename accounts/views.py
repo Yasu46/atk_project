@@ -4,6 +4,7 @@ from .forms import RegistrationForm
 from django.contrib import messages, auth
 import requests
 from django.contrib.auth.decorators import login_required
+from atk.forms import ATKResultForm
 
 
 def register(request):
@@ -64,4 +65,5 @@ def logout(request):
 
 @login_required(login_url='login')
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+    form = ATKResultForm()
+    return render(request, 'accounts/dashboard.html', {'form': form})
