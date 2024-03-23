@@ -69,3 +69,6 @@ Step 1 : Access localhost:8000/admin and enter the username and password that wa
 
 Step 2 : Admin can see the user information and submit ATK result information.
 
+
+# Team Management Result
+https://github.com/Yasu46/atk_project/issues/6#issue-2203768210
